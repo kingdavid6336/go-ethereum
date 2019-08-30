@@ -200,15 +200,15 @@ workflows:
       #     filters:
       #       tags:
       #         only: /.*/
-      - tests-linux-go-1.12:
-          requires:
-            - build-linux-go-1.12
-          filters:
-            tags:
-              only: /.*/
+      # - tests-linux-go-1.12:
+      #     requires:
+      #       - build-linux-go-1.12
+      #     filters:
+      #       tags:
+      #         only: /.*/
       - release-linux-go-1.12:
-          requires:
-            - tests-linux-go-1.12
+          # requires:
+          #   - tests-linux-go-1.12
           filters:
             tags:
               only: /^v.*/
